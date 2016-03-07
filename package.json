@@ -1,0 +1,22 @@
+{
+  "name": "praxis",
+  "version": "0.0.0",
+  "description": "CSS framework built on top of Axis and Stylus.",
+  "author": "Alejandro Iglesias",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alejandroiglesias/praxis.git"
+  },
+  "devDependencies": {
+    "axis": "^0.6.1",
+    "lost": "^6.7.2",
+    "stylus": "^0.54.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

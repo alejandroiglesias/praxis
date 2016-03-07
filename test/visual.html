@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Praxis Visual Test</title>
+
+    <link rel='stylesheet' href='../dist/praxis.css'>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            padding: 30px;
+        }
+        section {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 30px;
+            box-sizing: border-box;
+            margin: 1em 0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 0 0 1em 0;
+        }
+        .narrow {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+<section id='buttons'>
+    <h1>buttons</h1>
+    <div class='button'>button</div>
+</section>
+
+<section id='code'>
+    <h1>code</h1>
+    <code>code</code>
+    <pre>pre</pre>
+</section>
+
+<section id='forms'>
+    <h1>forms</h1>
+
+    <div>
+        <input type="text" placeholder='input'/>
+    </div>
+
+    <div>
+        <input type="text" disabled placeholder='disabled'/>
+    </div>
+
+    <div>
+        <label>this is a label</label>
+    </div>
+
+    <div class='form-field'>
+        <label>field</label>
+        <input type="text"/>
+    </div>
+
+    <div class='form-field has-error'>
+        <label>field error</label>
+        <input type="text"/>
+    </div>
+
+    <div class='form-field has-warning'>
+        <label>field warning</label>
+        <input type="text"/>
+    </div>
+
+    <div class='form-field has-success'>
+        <label>field success</label>
+        <input type="text"/>
+    </div>
+</section>
+
+<section id='tables'>
+    <h1>tables</h1>
+    <table class='table'>
+        <tr>
+            <th>Name</th>
+            <th>Money</th>
+        </tr>
+        <tr>
+            <td>Me</td>
+            <td>a billiyun</td>
+        </tr>
+        <tr>
+            <td>You</td>
+            <td>nuthun</td>
+        </tr>
+    </table>
+</section>
+
+<section id='typography'>
+    <h1>typography</h1>
+
+    <p>normal</p>
+    <p><strong>bold</strong></p>
+    <p><em>italic</em></p>
+
+
+    <p class='text-lowercase'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, nulla, officia
+        quibusdam.</p>
+    <p class='text-uppercase'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, nulla, officia
+        quibusdam.</p>
+
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <h3>Lorem ipsum dolor sit amet</h3>
+    <h4>Lorem ipsum dolor sit amet</h4>
+    <h5>Lorem ipsum dolor sit amet</h5>
+    <h6>Lorem ipsum dolor sit amet</h6>
+
+    <p class='small'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quos, velit, dolorem alias minima
+        iusto numquam cupiditate itaque sed voluptatibus voluptas beatae.</p>
+
+    <div><a href='#'>foobar!</a></div>
+
+    <ul>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+    </ul>
+
+    <ol>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+    </ol>
+
+    <ul class='list-inline'>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+    </ul>
+
+    <ul class='list-unstyled'>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
+    </ul>
+
+    <blockquote class='blockquote'>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <cite>some latin text</cite>
+    </blockquote>
+
+    <div class="narrow">
+        <h2 class="text-ellipsis">Sometimes you have to truncate verbose lines, and that's all there is to say.</h2>
+    </div>
+</section>
+
+</body>
+
+</html>

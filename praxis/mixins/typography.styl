@@ -1,0 +1,8 @@
+// A better font-face mixin
+
+font-face($name, $weight = 'normal', $style = 'normal')
+  @font-face
+    font-family: $name
+    src: url($font-path $name unquote('/') $name unquote('-') $weight unquote('-') $style unquote('.eot') '?#iefix') format('embedded-opentype'), url($font-path $name unquote('/') $name unquote('-') $weight unquote('-') $style unquote('.woff')) format('woff'), url($font-path $name unquote('/') $name unquote('-') $weight unquote('-') $style unquote('.woff2')) format('woff2'), url($font-path $name unquote('/') $name unquote('-') $weight unquote('-') $style unquote('.ttf')) format('truetype'), url($font-path $name unquote('/') $name unquote('-') $weight unquote('-') $style unquote('.eot') unquote('#') $name) format('svg');
+    font-weight: unquote($weight)
+    font-style: unquote($style)

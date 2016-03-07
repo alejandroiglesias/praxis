@@ -1,0 +1,74 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Typography baseline
+
+typography()
+
+
+// Headings
+
+h1, h2, h3, h4, h5, h6
+  margin 1em 0 .5em 0
+
+  small,
+  .small
+    bold()
+    color $storm-dust
+    font-size .6em
+
+
+
+// Emphasis & misc
+// -------------------------
+
+small,
+.small {
+  small()
+}
+
+// Alignment
+
+.text-nowrap
+  white-space nowrap
+
+
+// Transformation
+
+.text-lowercase
+  lowercase()
+
+.text-uppercase
+  uppercase()
+
+.text-ellipsis
+  ellipsis()
+
+
+// Contextual colors
+
+.text-muted
+  color $storm-dust
+
+
+// Lists
+
+ul
+  li
+    list-style-type '♦ '
+
+.list-unstyled
+  reset-list()
+
+.list-inline
+  inline-list()
+
+
+// Various
+
+.position
+  @extend .text-muted
+  h5()
+  margin-top -1em
