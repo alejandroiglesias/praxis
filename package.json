@@ -1,7 +1,7 @@
 {
   "name": "praxis",
-  "version": "0.0.0",
-  "description": "CSS framework built on top of Axis and Stylus.",
+  "version": "0.0.1",
+  "description": "Modular CSS framework built on top of the large and robust Axis CSS utility library and Stylus.",
   "author": "Alejandro Iglesias",
   "main": "index.js",
   "repository": {
