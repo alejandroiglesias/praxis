@@ -3,5 +3,17 @@
 // --------------------------------------------------
 
 
-.button
-  button()
+.btn-primary
+  button($brand-primary, $font-size)
+
+.btn-secondary
+  button(lighten(mix(#ffffff, #828282), 50%), $font-size)
+
+.btn-success
+  button($brand-success, $font-size);
+
+.btn-warning
+  button($brand-warning, $font-size);
+
+.btn-danger
+  button($brand-danger, $font-size);
