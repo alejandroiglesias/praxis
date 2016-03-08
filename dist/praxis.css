@@ -520,8 +520,7 @@ small,
   text-overflow: ellipsis;
   word-wrap: normal;
 }
-.text-muted,
-.position {
+.text-muted {
   color: #646261;
 }
 ul li {
@@ -553,15 +552,6 @@ ul li {
 }
 .list-inline li:last-child {
   margin-right: 0;
-}
-.position {
-  font-size: 16px;
-  font-size: 1rem;
-  text-rendering: optimizelegibility;
-  font-weight: bold;
-  margin: 0.75em 0;
-  line-height: 1.6em;
-  margin-top: -1em;
 }
 code {
   padding: 3px 4px;
