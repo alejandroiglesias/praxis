@@ -4,13 +4,16 @@
 
 
 +html5-inputs()
-  input()
+  input($aqua, 100%)
+
+input[type='file']
+  width 100%
 
   &[disabled]
     input-disabled()
 
 .form-field
-  field(right, 380px)
+  field(left, 100%)
 
   &.has-success
     field-success()
@@ -18,3 +21,6 @@
     field-warning()
   &.has-error
     field-error()
+
+label
+  label('block')
