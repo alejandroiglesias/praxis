@@ -5,10 +5,10 @@
     <title>Praxis Visual Test</title>
 
     <!-- Praxis -->
-    <link rel='stylesheet' href='../dist/praxis.css'>
+    <link rel="stylesheet" href="../dist/praxis.css">
 
     <!-- Monserrat type -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <style>
         .docs-head {
@@ -20,7 +20,6 @@
         }
 
         .docs-head .lead {
-            font-family: 'Montserrat', sans-serif;
             font-size: 1.28rem;
             text-align: center;
             position: relative;
@@ -28,7 +27,6 @@
         }
 
         .docs-logo {
-            font-family: 'Montserrat', sans-serif;
             font-size: 6.5rem;
             text-align: center;
             text-transform: uppercase;
@@ -48,8 +46,9 @@
             margin: 0;
         }
 
+        .docs-logo,
         .text-monserrat {
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Montserrat", sans-serif;
         }
 
         .sample {
@@ -80,7 +79,7 @@
 <body>
     <div class="docs-head">&nbsp;
         <h1 class="docs-logo">Praxis</h1>
-        <p class="lead">A modern CSS framework built with Stylus.</p>
+        <p class="lead text-monserrat">A modern CSS framework built with Stylus.</p>
         <p class="text-muted text-center">Currently in early development.</p>
     </div>
 
@@ -88,7 +87,7 @@
         <p><strong>Praxis is open source.</strong> For reviewing code, opening issues and making pull requests, go to the <a href="https://github.com/alejandroiglesias/praxis" target="_blank">GitHub project</a>.</p>
         <div class="row">
             <div class="col-12">
-                <section id='typography'>
+                <section id="typography">
                     <h1 class="text-monserrat">Typography</h1>
                     <p>Praxis includes recommended base typography styles and mixins for a better type on the web.</p>
 
@@ -116,9 +115,9 @@
 
                     <h2 class="text-monserrat">Transformations</h2>
                     <div class="sample">
-                        <p class='text-lowercase'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
+                        <p class="text-lowercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
                             nulla, officia quibusdam.</p>
-                        <p class='text-uppercase'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
+                        <p class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
                             nulla, officia quibusdam.</p>
                         <div class="narrow">
                             <p class="text-ellipsis">Sometimes you have to truncate verbose lines, and that's all there is
@@ -135,7 +134,7 @@
 
                     <h2 class="text-monserrat">Blockquotes</h2>
                     <div class="sample">
-                        <blockquote class='blockquote'>
+                        <blockquote class="blockquote">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <cite>some latin text</cite>
                         </blockquote>
@@ -171,7 +170,7 @@
 
                     <h3 class="text-monserrat">Unstyled</h3>
                     <div class="sample">
-                        <ul class='list-unstyled'>
+                        <ul class="list-unstyled">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Consectetur adipiscing elit</li>
                             <li>Sed auctor a odio vel pellentesque
@@ -189,7 +188,7 @@
 
                     <h3 class="text-monserrat">Inline</h3>
                     <div class="sample">
-                        <ul class='list-inline'>
+                        <ul class="list-inline">
                             <li>Lorem ipsum</li>
                             <li>Consectetur adipiscing</li>
                             <li>Sed auctor</li>
@@ -197,7 +196,7 @@
                     </div>
                 </section>
 
-                <section id='code'>
+                <section id="code">
                     <h1 class="text-monserrat">Code</h1>
                     <p>Simple and polished styles for inline code snippets and longer, multiline blocks of code.</p>
 
@@ -209,12 +208,12 @@
                     </div>
                 </section>
 
-                <section id='tables'>
+                <section id="tables">
                     <h1 class="text-monserrat">Tables</h1>
                     <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, tables are opt-in. Just add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
 
                     <div class="sample">
-                        <table class='table'>
+                        <table class="table">
                             <tr>
                                 <th>Name</th>
                                 <th>Money</th>
@@ -231,7 +230,7 @@
                     </div>
                 </section>
 
-                <section id='forms'>
+                <section id="forms">
                     <h1 class="text-monserrat">Forms</h1>
                     <p>Praxis provides several form control styles, layout options, and custom components for creating a
                         wide variety of forms.</p>
@@ -299,30 +298,30 @@
                             </label>
                         </div>
 
-                        <button type="submit" class='btn btn-primary'>Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
 
                         <!--<div>-->
-                            <!--<input type="text" disabled placeholder='disabled'/>-->
+                            <!--<input type="text" disabled placeholder="disabled"/>-->
                         <!--</div>-->
 
-                        <!--<div class='form-field has-error'>-->
+                        <!--<div class="form-field has-error">-->
                             <!--<label>field error</label>-->
                             <!--<input type="text"/>-->
                         <!--</div>-->
 
-                        <!--<div class='form-field has-warning'>-->
+                        <!--<div class="form-field has-warning">-->
                             <!--<label>field warning</label>-->
                             <!--<input type="text"/>-->
                         <!--</div>-->
 
-                        <!--<div class='form-field has-success'>-->
+                        <!--<div class="form-field has-success">-->
                             <!--<label>field success</label>-->
                             <!--<input type="text"/>-->
                         <!--</div>-->
                     </div>
                 </section>
 
-                <section id='buttons'>
+                <section id="buttons">
                     <h1 class="text-monserrat">Buttons</h1>
                     <p>Praxis' buttons are extremely flexible to be able to fit any situation.</p>
 
@@ -336,7 +335,7 @@
                     </div>
                 </section>
 
-                <section id='buttons'>
+                <section id="grid">
                     <h1 class="text-monserrat">Grid</h1>
                     <p>Praxis ships with <a href="https://github.com/peterramsing/lost" target="_blank">Lost Grid</a>, a powerful grid system for your layouts.</p>
 
