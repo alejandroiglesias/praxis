@@ -1,7 +1,7 @@
 Praxis
 ------
 
-Praxis is a modular CSS framework built on top of the large and robust [Axis](https://github.com/jenius/axis) CSS utility library and [Stylus](https://github.com/stylus/stylus).
+Praxis is a modular CSS framework built on top of the large and robust [Axis](http://axis.netlify.com/) CSS utility library and [Stylus](http://stylus-lang.com/).
 
 **Note:** This project is in early development, and versioning is a little different. [Read this](http://markup.im/#q4_cRZ1Q) for more details.
 
@@ -23,5 +23,5 @@ Praxis does not include any cross-browser code at all, only pure CSS 3 as define
 
 ### Miscellaneous
 
-- Details on the license [can be found here](license.md)
-- Details on running tests and contributing [can be found here](contributing.md)
+- Details on the license [can be found here](LICENSE)
+- Details on running tests and contributing [can be found here](CONTRIBUTING.md)
