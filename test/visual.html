@@ -16,15 +16,15 @@
             color: white;
             background: url(fixtures/08-01.jpg) no-repeat center center;
             background-size: cover;
-            padding-bottom: 3.8rem;
             margin-bottom: 20px;
+            padding-bottom: 30px;
         }
 
         .docs-head .lead {
             font-size: 1.28rem;
             text-align: center;
             position: relative;
-            top: -50px;
+            top: -60px;
         }
 
         .docs-logo {
@@ -64,11 +64,15 @@
 
         .box-row {
             background: #e7e5e9;
-            margin-bottom: 1rem;
+            margin-bottom: 30px;
             padding: 12px;
             text-align: center;
             line-height: 1em;
             border-radius: 4px;
+        }
+
+        .sample .row:last-child .box-row {
+            margin-bottom: 0;
         }
 
         .narrow {
@@ -78,10 +82,12 @@
 </head>
 
 <body>
-    <div class="docs-head">&nbsp;
-        <h1 class="docs-logo">Praxis</h1>
-        <p class="lead text-monserrat">A modern CSS framework built with Stylus.</p>
-        <p class="text-muted text-center">Currently in early development.</p>
+    <div class="docs-head">
+        <div class="container">
+            <h1 class="docs-logo">Praxis</h1>
+            <p class="lead text-monserrat">A modern CSS framework built with Stylus.</p>
+            <p class="text-muted text-center">Currently in early development.</p>
+        </div>
     </div>
 
     <div class="container">
