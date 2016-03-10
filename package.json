@@ -15,6 +15,8 @@
     "stylus": "^0.54.0"
   },
   "scripts": {
+    "build": "stylus praxis/index.styl --out dist/praxis.css --use ./node_modules/axis --use ./node_modules/poststylus --with \"['lost']\" && stylus praxis/index.styl --compress --out dist/praxis.min.css --use ./node_modules/axis --use ./node_modules/poststylus --with \"['lost']\"",
+    "start": "stylus praxis/index.styl --watch -o dist/praxis.css --use ./node_modules/axis --use ./node_modules/poststylus --with \"['lost']\"",
     "test": "mocha"
   },
   "engines": {
