@@ -1,10 +1,23 @@
-// Container widths
-//
-// Set the container width, and override it for fixed navbars in media queries.
+$gutter = 30px
+
+// Main containers
+
+.container-fluid
+  padding-left: ($gutter / 2)
+  padding-right: ($gutter / 2)
+  lost-utility: clearfix
 
 .container
-  // TODO: make responsive.
-  lost-center: 940px 15px
+  @extend .container-fluid
+
+  @media (min-width: 768px)
+    lost-center: 720px ($gutter / 2)
+
+  @media (min-width: 992px)
+    lost-center: 940px ($gutter / 2)
+
+  @media (min-width: 1200px)
+    lost-center: 1140px ($gutter / 2)
 
 // Row
 //
@@ -17,6 +30,28 @@
 //
 // Common styles for small and large grid columns
 
-for num in (1...12)
-  .col-{num}
-    lost-column: num / 12
+@media (min-width: 768px)
+  for num in (1...12)
+    .col-{num}
+      lost-column: num/12 12 ($gutter / 2)
+
+    // Special classes
+    .col-third {
+      lost-column: 4/12
+    }
+    .col-two-thirds {
+      lost-column: 8/12
+    }
+    .col-half {
+      lost-column: 6/12
+    }
+    .col-quarter {
+      lost-column: 3/12
+    }
+
+// Larger grid columns have more gutter
+
+@media (min-width: 992px)
+  for num in (1...12)
+    .col-{num}
+      lost-column: num/12 12 $gutter
