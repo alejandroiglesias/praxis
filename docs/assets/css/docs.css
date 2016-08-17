@@ -10,22 +10,36 @@
     color: white;
     background: url(../img/08-01.jpg) no-repeat center center;
     background-size: cover;
-    margin-bottom: 20px;
+    margin-bottom: 2.4rem;
     padding-bottom: 30px;
 }
 .docs-head .lead {
     font-size: 1.28rem;
     text-align: center;
-    position: relative;
-    top: -60px;
+    margin-top: 0;
 }
 .docs-logo {
+    margin-bottom: 0;
     font-size: 6.5rem;
+    line-height: 1.3;
     text-align: center;
     text-transform: uppercase;
     color: transparent;
     letter-spacing: .1em;
     -webkit-text-stroke: 4px white;
+}
+@media screen and (max-width: 490px) {
+    .docs-logo {
+        font-size: 21.2vw;
+    }
+}
+
+/* Docs nav */
+.docs-nav .nav-item:last-child {
+    margin-bottom: 2.4rem;
+}
+.docs-nav .nav-link {
+    color: #373a3c;
 }
 
 /* Docs footer */
