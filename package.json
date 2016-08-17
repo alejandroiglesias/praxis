@@ -15,12 +15,14 @@
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "gh-pages": "^0.11.0",
     "stylus": "^0.54.0"
   },
   "scripts": {
     "build": "stylus praxis/index.styl --out dist/praxis.css --use ./node_modules/axis --use ./node_modules/poststylus --with \"['lost']\" && stylus praxis/index.styl --compress --out dist/praxis.min.css --use ./node_modules/axis --use ./node_modules/poststylus --with \"['lost']\"",
     "start": "browser-sync start --server docs/ --files=\"docs/dist/*, docs/assets/*, docs/*.html\" & stylus praxis/index.styl --watch -o docs/dist/praxis.css --use ./node_modules/axis --use ./node_modules/poststylus --with \"['lost']\"",
-    "test": "mocha"
+    "test": "mocha",
+    "deploy": "gh-pages --dist docs/"
   },
   "engines": {
     "node": ">=0.8.0"
