@@ -17,3 +17,13 @@
 
 .btn-danger
   button($brand-danger, $font-size)
+
+.btn-link
+  button($default-color, $font-size)
+  background-color: transparent
+  color: $blue
+
+  &:hover
+    background-color: transparent
+    color: darken($blue, 15%)
+    text-decoration: underline
