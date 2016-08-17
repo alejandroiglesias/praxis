@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "axis": "^0.6.1",
-    "lost": "^6.7.2",
+    "lost": "^7.0.4",
     "poststylus": "^0.2.3"
   },
   "devDependencies": {
