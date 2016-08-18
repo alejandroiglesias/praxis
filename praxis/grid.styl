@@ -1,23 +1,26 @@
-$gutter = 30px
+// Conditionally enable flexbox
+
+if $enable-flex
+  @lost flexbox flex
 
 // Main containers
 
 .container-fluid
-  padding-left: ($gutter / 2)
-  padding-right: ($gutter / 2)
+  padding-left: ($grid-gutter-width / 2)
+  padding-right: ($grid-gutter-width / 2)
   lost-utility: clearfix
 
 .container
   @extend .container-fluid
 
   @media (min-width: 768px)
-    lost-center: 720px ($gutter / 2)
+    lost-center: 720px ($grid-gutter-width / 2) no-flex
 
   @media (min-width: 992px)
-    lost-center: 940px ($gutter / 2)
+    lost-center: 940px ($grid-gutter-width / 2) no-flex
 
   @media (min-width: 1200px)
-    lost-center: 1140px ($gutter / 2)
+    lost-center: 1140px ($grid-gutter-width / 2) no-flex
 
 // Row
 //
@@ -25,15 +28,17 @@ $gutter = 30px
 
 .row
   lost-utility: clearfix
+  if $enable-flex
+    lost-flex-container: row
 
 // Columns
 //
 // Common styles for small and large grid columns
 
 @media (min-width: 768px)
-  for num in (1...12)
+  for num in (1...13)
     .col-{num}
-      lost-column: num/12 12 ($gutter / 2)
+      lost-column: num/12 12 ($grid-gutter-width / 2)
 
     // Special classes
     .col-third {
@@ -52,6 +57,6 @@ $gutter = 30px
 // Larger grid columns have more gutter
 
 @media (min-width: 992px)
-  for num in (1...12)
+  for num in (1...13)
     .col-{num}
-      lost-column: num/12 12 $gutter
+      lost-column: num/12 12 $grid-gutter-width
