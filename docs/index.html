@@ -31,28 +31,27 @@
 
             <div class="row">
                 <div class="col-2">
-                    <nav>
-                        <ul class="docs-nav nav m-a-1">
+                    <nav class="docs-nav p-a-1">
+                        <h4 class="text-monserrat m-t-0">Praxis</h4>
+                        <ul class="nav">
+                            <!-- Using &nbsp; since we want to avoid word breaks in navs for now. -->
                             <li class="nav-item">
-                                <a class="nav-link" href="#getting-started">Getting started</a>
+                                <a class="nav-link" href="#get-started">Get&nbsp;started</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#grid">Grid system</a>
+                                <a class="nav-link" href="#base">Base</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#typography">Typography</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#code">Code</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#tables">Tables</a>
+                                <a class="nav-link" href="#grid">Grid</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#forms">Forms</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#buttons">Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tables">Tables</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#navs">Navs</a>
@@ -64,78 +63,14 @@
                     </nav>
                 </div>
                 <div class="col-8">
-                    <section id="getting-started">
-                        <h1 class="text-monserrat m-t-0">Getting started</h1>
+                    <section id="get-started">
+                        <h1 class="text-monserrat m-t-0">Get started</h1>
                         <p>Praxis is a modular CSS framework built on top of the large and robust Axis CSS utility library and Stylus, designed to be the first-choice pattern library for designers and developers using Stylus who want to leverage the power of the language, as well as a modest, clean and lightweight option for those looking for alternatives.</p>
                         <p><strong>Praxis is open source.</strong> For reviewing code, opening issues and making pull requests, go to the <a href="https://github.com/alejandroiglesias/praxis" target="_blank">GitHub project</a>.</p>
                     </section>
-                    <section id="grid">
-                        <h1 class="text-monserrat">Grid system</h1>
-                        <p>Praxis ships with a powerful grid system called <a href="https://github.com/peterramsing/lost" target="_blank">Lost Grid</a>, fully mobile-first configured out of the box for your layouts.</p>
 
-                        <div class="docs-example">
-                            <div class="row">
-                                <div class="col-12"><div class="demo-col">.col-12</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-6"><div class="demo-col">.col-6</div></div>
-                                <div class="col-6"><div class="demo-col">.col-6</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4"><div class="demo-col">.col-4</div></div>
-                                <div class="col-4"><div class="demo-col">.col-4</div></div>
-                                <div class="col-4"><div class="demo-col">.col-4</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3"><div class="demo-col">.col-3</div></div>
-                                <div class="col-3"><div class="demo-col">.col-3</div></div>
-                                <div class="col-3"><div class="demo-col">.col-3</div></div>
-                                <div class="col-3"><div class="demo-col">.col-3</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-5"><div class="demo-col">.col-5</div></div>
-                                <div class="col-7"><div class="demo-col">.col-7</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-4"><div class="demo-col">.col-4</div></div>
-                                <div class="col-8"><div class="demo-col">.col-8</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-9"><div class="demo-col">.col-9</div></div>
-                                <div class="col-3"><div class="demo-col">.col-3</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-10"><div class="demo-col">.col-10</div></div>
-                                <div class="col-2"><div class="demo-col">.col-2</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-half"><div class="demo-col">.col-half</div></div>
-                                <div class="col-half"><div class="demo-col">.col-half</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-third"><div class="demo-col">.col-third</div></div>
-                                <div class="col-two-thirds"><div class="demo-col">.col-two-thirds</div></div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-quarter"><div class="demo-col">.col-quarter</div></div>
-                                <div class="col-quarter"><div class="demo-col">.col-quarter</div></div>
-                                <div class="col-half"><div class="demo-col">.col-half</div></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="typography">
-                        <h1 class="text-monserrat">Typography</h1>
+                    <section id="base">
+                        <h1 class="text-monserrat">Base</h1>
                         <p>Praxis includes recommended base typography styles and mixins for a better type on the web.</p>
 
                         <h2 class="text-monserrat">Headings</h2>
@@ -243,37 +178,68 @@
                         </div>
                     </section>
 
-                    <section id="code">
-                        <h1 class="text-monserrat">Code</h1>
-                        <p>Simple and polished styles for inline code snippets and longer, multiline blocks of code.</p>
+                    <section id="grid">
+                        <h1 class="text-monserrat">Grid</h1>
+                        <p>Praxis ships with a powerful grid system called <a href="https://github.com/peterramsing/lost" target="_blank">Lost Grid</a>, fully mobile-first configured out of the box for your layouts.</p>
 
                         <div class="docs-example">
-                            For example, <code>&lt;section&gt;</code> should be wrapped as inline.
-                        </div>
-                        <div class="docs-example">
-                            <pre>&lt;p&gt;docs-example text here...&lt;/p&gt;</pre>
-                        </div>
-                    </section>
+                            <div class="row">
+                                <div class="col-12"><div class="demo-col">.col-12</div></div>
+                            </div>
 
-                    <section id="tables">
-                        <h1 class="text-monserrat">Tables</h1>
-                        <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, tables are opt-in. Just add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+                            <div class="row">
+                                <div class="col-6"><div class="demo-col">.col-6</div></div>
+                                <div class="col-6"><div class="demo-col">.col-6</div></div>
+                            </div>
 
-                        <div class="docs-example">
-                            <table class="table">
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Money</th>
-                                </tr>
-                                <tr>
-                                    <td>Me</td>
-                                    <td>a billiyun</td>
-                                </tr>
-                                <tr>
-                                    <td>You</td>
-                                    <td>nuthun</td>
-                                </tr>
-                            </table>
+                            <div class="row">
+                                <div class="col-4"><div class="demo-col">.col-4</div></div>
+                                <div class="col-4"><div class="demo-col">.col-4</div></div>
+                                <div class="col-4"><div class="demo-col">.col-4</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3"><div class="demo-col">.col-3</div></div>
+                                <div class="col-3"><div class="demo-col">.col-3</div></div>
+                                <div class="col-3"><div class="demo-col">.col-3</div></div>
+                                <div class="col-3"><div class="demo-col">.col-3</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-5"><div class="demo-col">.col-5</div></div>
+                                <div class="col-7"><div class="demo-col">.col-7</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4"><div class="demo-col">.col-4</div></div>
+                                <div class="col-8"><div class="demo-col">.col-8</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-9"><div class="demo-col">.col-9</div></div>
+                                <div class="col-3"><div class="demo-col">.col-3</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-10"><div class="demo-col">.col-10</div></div>
+                                <div class="col-2"><div class="demo-col">.col-2</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-half"><div class="demo-col">.col-half</div></div>
+                                <div class="col-half"><div class="demo-col">.col-half</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-third"><div class="demo-col">.col-third</div></div>
+                                <div class="col-two-thirds"><div class="demo-col">.col-two-thirds</div></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-quarter"><div class="demo-col">.col-quarter</div></div>
+                                <div class="col-quarter"><div class="demo-col">.col-quarter</div></div>
+                                <div class="col-half"><div class="demo-col">.col-half</div></div>
+                            </div>
                         </div>
                     </section>
 
@@ -382,6 +348,28 @@
                         </div>
                     </section>
 
+                    <section id="tables">
+                        <h1 class="text-monserrat">Tables</h1>
+                        <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, tables are opt-in. Just add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+
+                        <div class="docs-example">
+                            <table class="table">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Money</th>
+                                </tr>
+                                <tr>
+                                    <td>Me</td>
+                                    <td>a billiyun</td>
+                                </tr>
+                                <tr>
+                                    <td>You</td>
+                                    <td>nuthun</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+
                     <section id="navs">
                         <h1 class="text-monserrat">Navs</h1>
                         <p>Navigation component meant to provide a base nav and being extensible.</p>
@@ -437,10 +425,12 @@
 
         <div class="docs-footer">
             <div class="container-fluid">
-                <div class="col-2">&nbsp;</div>
-                <div class="col-8">
-                    <p>Designed and built by <a href="http://alejandro-iglesias.com/" target="_blank">Alejandro Iglesias</a> (<a href="https://twitter.com/aiglesias_" target="_blank">@aiglesias_</a>).</p>
-                    <p>Currently in early development. Code licensed <a href="https://github.com/alejandroiglesias/praxis/blob/master/LICENSE" target="_blank">MIT</a>.</p>
+                <div class="row">
+                    <div class="col-2">&nbsp;</div>
+                    <div class="col-8">
+                        <p>Designed and built by <a href="http://alejandro-iglesias.com/" target="_blank">Alejandro Iglesias</a> (<a href="https://twitter.com/aiglesias_" target="_blank">@aiglesias_</a>).</p>
+                        <p>Currently in early development. Code licensed <a href="https://github.com/alejandroiglesias/praxis/blob/master/LICENSE" target="_blank">MIT</a>.</p>
+                    </div>
                 </div>
             </div>
         </div>
