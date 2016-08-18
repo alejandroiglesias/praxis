@@ -6,8 +6,11 @@ base()
 typography()
 
 body
-  -line-height()
+  // Don't use -line-height() for now since it sets a line height in ems.
+  line-height: 1.5
 
+p
+  line-height: 1.5
 
 //
 // Headings
@@ -15,12 +18,27 @@ body
 
 h1, h2, h3, h4, h5, h6
   margin: 1em 0 .5em 0
+  line-height: 1.1
 
   small,
   .small
     bold()
     color: $storm-dust
     font-size: .6em
+
+// Type lead
+.lead
+  font-size: 1.368em
+
+  &.lead-display
+    padding: 1.1em
+    border-top: 1px solid $font-color
+    border-bottom: 1px solid $font-color
+
+// Type display
+.display
+  font-size: 5.1em
+  font-weight: 400
 
 
 //
@@ -30,6 +48,8 @@ h1, h2, h3, h4, h5, h6
 small,
 .small
   small()
+  font-size: 80%
+  opacity: .8
 
 
 //
@@ -41,3 +61,19 @@ small,
 
 .list-inline
   inline-list()
+
+
+//
+// Misc
+//
+
+blockquote
+  // Testing two alternatives:
+  // One is extending .lead
+  @extend .lead
+  // Another is using a heavier font-weight
+  //font-weight: 500
+  // Have to pick one, otherwise it'll end with too much weight. Going with the first one for now.
+
+  padding-left: 1em
+  border-left-color: $font-color

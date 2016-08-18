@@ -316,7 +316,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  color: #222;
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -328,7 +328,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  color: #222;
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -487,8 +487,10 @@ blockquote > figcaption:before {
   hyphenate-lines: 3;
 }
 body {
-  line-height: 25.6px;
-  line-height: 1.6rem;
+  line-height: 1.5;
+}
+p {
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -497,6 +499,7 @@ h4,
 h5,
 h6 {
   margin: 1em 0 0.5em 0;
+  line-height: 1.1;
 }
 h1 small,
 h2 small,
@@ -514,11 +517,27 @@ h6 .small {
   color: #646261;
   font-size: 0.6em;
 }
+.lead,
+blockquote {
+  font-size: 1.368em;
+}
+.lead.lead-display,
+blockquote.lead-display {
+  padding: 1.1em;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.display {
+  font-size: 5.1em;
+  font-weight: 400;
+}
 small,
 .small {
   font-size: 55%;
   opacity: 0.6;
   font-weight: normal;
+  font-size: 80%;
+  opacity: 0.8;
 }
 .list-unstyled {
   margin: 0;
@@ -546,6 +565,10 @@ small,
 }
 .list-inline li:last-child {
   margin-right: 0;
+}
+blockquote {
+  padding-left: 1em;
+  border-left-color: #333;
 }
 code {
   padding: 3px 4px;
