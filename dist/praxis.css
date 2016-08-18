@@ -316,7 +316,19 @@ html {
 }
 body {
   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  color: #222;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size-adjust: auto;
+}
+html {
+  font-size: 16px;
+  font-size: 100%;
+}
+body {
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -474,6 +486,12 @@ blockquote > figcaption:before {
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
 }
+body {
+  line-height: 1.5;
+}
+p {
+  line-height: 1.5;
+}
 h1,
 h2,
 h3,
@@ -481,6 +499,7 @@ h4,
 h5,
 h6 {
   margin: 1em 0 0.5em 0;
+  line-height: 1.1;
 }
 h1 small,
 h2 small,
@@ -498,11 +517,27 @@ h6 .small {
   color: #646261;
   font-size: 0.6em;
 }
+.lead,
+blockquote {
+  font-size: 1.368em;
+}
+.lead.lead-display,
+blockquote.lead-display {
+  padding: 1.1em;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.display {
+  font-size: 5.1em;
+  font-weight: 400;
+}
 small,
 .small {
   font-size: 55%;
   opacity: 0.6;
   font-weight: normal;
+  font-size: 80%;
+  opacity: 0.8;
 }
 .list-unstyled {
   margin: 0;
@@ -530,6 +565,10 @@ small,
 }
 .list-inline li:last-child {
   margin-right: 0;
+}
+blockquote {
+  padding-left: 1em;
+  border-left-color: #333;
 }
 code {
   padding: 3px 4px;
@@ -853,11 +892,44 @@ label {
 .btn-danger:active {
   background-color: #e5513e;
 }
+.btn-link {
+  font-size: 16px;
+  padding: 12px 27px;
+  border-radius: 4px;
+  background-color: #0074d9;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  background-color: transparent;
+  color: #0074d9;
+  font-weight: normal;
+}
+.btn-link:hover,
+.btn-link:focus {
+  background-color: #006ece;
+  color: #f7f7f7;
+  border: none;
+}
+.btn-link:active {
+  background-color: #0068c3;
+}
+.btn-link:hover {
+  background-color: transparent;
+  color: #0063b8;
+  text-decoration: underline;
+}
 .container-fluid,
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  *zoom: 1;
 }
 .container-fluid:before,
 .container:before {
@@ -872,7 +944,6 @@ label {
 }
 @media (min-width: 768px) {
   .container {
-    *zoom: 1;
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -891,7 +962,6 @@ label {
 }
 @media (min-width: 992px) {
   .container {
-    *zoom: 1;
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -910,7 +980,6 @@ label {
 }
 @media (min-width: 1200px) {
   .container {
-    *zoom: 1;
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
@@ -927,9 +996,6 @@ label {
     clear: both;
   }
 }
-.row {
-  *zoom: 1;
-}
 .row:before {
   content: '';
   display: table;
@@ -941,7 +1007,8 @@ label {
 }
 @media (min-width: 768px) {
   .col-1 {
-    width: calc(99.99% * 1/12 - (15px - 15px * 1/12));
+    width: calc(99.9% * 1/12 - (15px - 15px * 1/12));
+    min-height: 1px;
   }
   .col-1:nth-child(1n) {
     float: left;
@@ -956,10 +1023,11 @@ label {
     float: right;
   }
   .col-1:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -974,10 +1042,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -992,10 +1061,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1010,10 +1080,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1028,10 +1099,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-2 {
-    width: calc(99.99% * 2/12 - (15px - 15px * 2/12));
+    width: calc(99.9% * 2/12 - (15px - 15px * 2/12));
+    min-height: 1px;
   }
   .col-2:nth-child(1n) {
     float: left;
@@ -1046,10 +1118,11 @@ label {
     float: right;
   }
   .col-2:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1064,10 +1137,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1082,10 +1156,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1100,10 +1175,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1118,10 +1194,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-3 {
-    width: calc(99.99% * 3/12 - (15px - 15px * 3/12));
+    width: calc(99.9% * 3/12 - (15px - 15px * 3/12));
+    min-height: 1px;
   }
   .col-3:nth-child(1n) {
     float: left;
@@ -1136,10 +1213,11 @@ label {
     float: right;
   }
   .col-3:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1154,10 +1232,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1172,10 +1251,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1190,10 +1270,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1208,10 +1289,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-4 {
-    width: calc(99.99% * 4/12 - (15px - 15px * 4/12));
+    width: calc(99.9% * 4/12 - (15px - 15px * 4/12));
+    min-height: 1px;
   }
   .col-4:nth-child(1n) {
     float: left;
@@ -1226,10 +1308,11 @@ label {
     float: right;
   }
   .col-4:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1244,10 +1327,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1262,10 +1346,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1280,10 +1365,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1298,10 +1384,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-5 {
-    width: calc(99.99% * 5/12 - (15px - 15px * 5/12));
+    width: calc(99.9% * 5/12 - (15px - 15px * 5/12));
+    min-height: 1px;
   }
   .col-5:nth-child(1n) {
     float: left;
@@ -1316,10 +1403,11 @@ label {
     float: right;
   }
   .col-5:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1334,10 +1422,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1352,10 +1441,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1370,10 +1460,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1388,10 +1479,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-6 {
-    width: calc(99.99% * 6/12 - (15px - 15px * 6/12));
+    width: calc(99.9% * 6/12 - (15px - 15px * 6/12));
+    min-height: 1px;
   }
   .col-6:nth-child(1n) {
     float: left;
@@ -1406,10 +1498,11 @@ label {
     float: right;
   }
   .col-6:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1424,10 +1517,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1442,10 +1536,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1460,10 +1555,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1478,10 +1574,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-7 {
-    width: calc(99.99% * 7/12 - (15px - 15px * 7/12));
+    width: calc(99.9% * 7/12 - (15px - 15px * 7/12));
+    min-height: 1px;
   }
   .col-7:nth-child(1n) {
     float: left;
@@ -1496,10 +1593,11 @@ label {
     float: right;
   }
   .col-7:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1514,10 +1612,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1532,10 +1631,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1550,10 +1650,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1568,10 +1669,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-8 {
-    width: calc(99.99% * 8/12 - (15px - 15px * 8/12));
+    width: calc(99.9% * 8/12 - (15px - 15px * 8/12));
+    min-height: 1px;
   }
   .col-8:nth-child(1n) {
     float: left;
@@ -1586,10 +1688,11 @@ label {
     float: right;
   }
   .col-8:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1604,10 +1707,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1622,10 +1726,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1640,10 +1745,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1658,10 +1764,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-9 {
-    width: calc(99.99% * 9/12 - (15px - 15px * 9/12));
+    width: calc(99.9% * 9/12 - (15px - 15px * 9/12));
+    min-height: 1px;
   }
   .col-9:nth-child(1n) {
     float: left;
@@ -1676,10 +1783,11 @@ label {
     float: right;
   }
   .col-9:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1694,10 +1802,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1712,10 +1821,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1730,10 +1840,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1748,10 +1859,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-10 {
-    width: calc(99.99% * 10/12 - (15px - 15px * 10/12));
+    width: calc(99.9% * 10/12 - (15px - 15px * 10/12));
+    min-height: 1px;
   }
   .col-10:nth-child(1n) {
     float: left;
@@ -1766,10 +1878,11 @@ label {
     float: right;
   }
   .col-10:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1784,10 +1897,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1802,10 +1916,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1820,10 +1935,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1838,10 +1954,11 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-11 {
-    width: calc(99.99% * 11/12 - (15px - 15px * 11/12));
+    width: calc(99.9% * 11/12 - (15px - 15px * 11/12));
+    min-height: 1px;
   }
   .col-11:nth-child(1n) {
     float: left;
@@ -1856,10 +1973,11 @@ label {
     float: right;
   }
   .col-11:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-third {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
   }
   .col-third:nth-child(1n) {
     float: left;
@@ -1874,10 +1992,11 @@ label {
     float: right;
   }
   .col-third:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-two-thirds {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
   }
   .col-two-thirds:nth-child(1n) {
     float: left;
@@ -1892,10 +2011,11 @@ label {
     float: right;
   }
   .col-two-thirds:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-half {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
   }
   .col-half:nth-child(1n) {
     float: left;
@@ -1910,10 +2030,11 @@ label {
     float: right;
   }
   .col-half:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-quarter {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
   }
   .col-quarter:nth-child(1n) {
     float: left;
@@ -1928,12 +2049,107 @@ label {
     float: right;
   }
   .col-quarter:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
+  }
+  .col-12 {
+    width: calc(99.9% * 12/12 - (15px - 15px * 12/12));
+    min-height: 1px;
+  }
+  .col-12:nth-child(1n) {
+    float: left;
+    margin-right: 15px;
+    clear: none;
+  }
+  .col-12:last-child {
+    margin-right: 0;
+  }
+  .col-12:nth-child(12n) {
+    margin-right: 0;
+    float: right;
+  }
+  .col-12:nth-child(12n + 1) {
+    clear: both;
+  }
+  .col-third {
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
+    min-height: 1px;
+  }
+  .col-third:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .col-third:last-child {
+    margin-right: 0;
+  }
+  .col-third:nth-child(12n) {
+    margin-right: 0;
+    float: right;
+  }
+  .col-third:nth-child(12n + 1) {
+    clear: both;
+  }
+  .col-two-thirds {
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
+    min-height: 1px;
+  }
+  .col-two-thirds:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .col-two-thirds:last-child {
+    margin-right: 0;
+  }
+  .col-two-thirds:nth-child(12n) {
+    margin-right: 0;
+    float: right;
+  }
+  .col-two-thirds:nth-child(12n + 1) {
+    clear: both;
+  }
+  .col-half {
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
+    min-height: 1px;
+  }
+  .col-half:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .col-half:last-child {
+    margin-right: 0;
+  }
+  .col-half:nth-child(12n) {
+    margin-right: 0;
+    float: right;
+  }
+  .col-half:nth-child(12n + 1) {
+    clear: both;
+  }
+  .col-quarter {
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
+    min-height: 1px;
+  }
+  .col-quarter:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .col-quarter:last-child {
+    margin-right: 0;
+  }
+  .col-quarter:nth-child(12n) {
+    margin-right: 0;
+    float: right;
+  }
+  .col-quarter:nth-child(12n + 1) {
+    clear: both;
   }
 }
 @media (min-width: 992px) {
   .col-1 {
-    width: calc(99.99% * 1/12 - (30px - 30px * 1/12));
+    width: calc(99.9% * 1/12 - (30px - 30px * 1/12));
   }
   .col-1:nth-child(1n) {
     float: left;
@@ -1948,10 +2164,10 @@ label {
     float: right;
   }
   .col-1:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-2 {
-    width: calc(99.99% * 2/12 - (30px - 30px * 2/12));
+    width: calc(99.9% * 2/12 - (30px - 30px * 2/12));
   }
   .col-2:nth-child(1n) {
     float: left;
@@ -1966,10 +2182,10 @@ label {
     float: right;
   }
   .col-2:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-3 {
-    width: calc(99.99% * 3/12 - (30px - 30px * 3/12));
+    width: calc(99.9% * 3/12 - (30px - 30px * 3/12));
   }
   .col-3:nth-child(1n) {
     float: left;
@@ -1984,10 +2200,10 @@ label {
     float: right;
   }
   .col-3:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-4 {
-    width: calc(99.99% * 4/12 - (30px - 30px * 4/12));
+    width: calc(99.9% * 4/12 - (30px - 30px * 4/12));
   }
   .col-4:nth-child(1n) {
     float: left;
@@ -2002,10 +2218,10 @@ label {
     float: right;
   }
   .col-4:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-5 {
-    width: calc(99.99% * 5/12 - (30px - 30px * 5/12));
+    width: calc(99.9% * 5/12 - (30px - 30px * 5/12));
   }
   .col-5:nth-child(1n) {
     float: left;
@@ -2020,10 +2236,10 @@ label {
     float: right;
   }
   .col-5:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-6 {
-    width: calc(99.99% * 6/12 - (30px - 30px * 6/12));
+    width: calc(99.9% * 6/12 - (30px - 30px * 6/12));
   }
   .col-6:nth-child(1n) {
     float: left;
@@ -2038,10 +2254,10 @@ label {
     float: right;
   }
   .col-6:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-7 {
-    width: calc(99.99% * 7/12 - (30px - 30px * 7/12));
+    width: calc(99.9% * 7/12 - (30px - 30px * 7/12));
   }
   .col-7:nth-child(1n) {
     float: left;
@@ -2056,10 +2272,10 @@ label {
     float: right;
   }
   .col-7:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-8 {
-    width: calc(99.99% * 8/12 - (30px - 30px * 8/12));
+    width: calc(99.9% * 8/12 - (30px - 30px * 8/12));
   }
   .col-8:nth-child(1n) {
     float: left;
@@ -2074,10 +2290,10 @@ label {
     float: right;
   }
   .col-8:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-9 {
-    width: calc(99.99% * 9/12 - (30px - 30px * 9/12));
+    width: calc(99.9% * 9/12 - (30px - 30px * 9/12));
   }
   .col-9:nth-child(1n) {
     float: left;
@@ -2092,10 +2308,10 @@ label {
     float: right;
   }
   .col-9:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-10 {
-    width: calc(99.99% * 10/12 - (30px - 30px * 10/12));
+    width: calc(99.9% * 10/12 - (30px - 30px * 10/12));
   }
   .col-10:nth-child(1n) {
     float: left;
@@ -2110,10 +2326,10 @@ label {
     float: right;
   }
   .col-10:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
   .col-11 {
-    width: calc(99.99% * 11/12 - (30px - 30px * 11/12));
+    width: calc(99.9% * 11/12 - (30px - 30px * 11/12));
   }
   .col-11:nth-child(1n) {
     float: left;
@@ -2128,8 +2344,67 @@ label {
     float: right;
   }
   .col-11:nth-child(12n + 1) {
-    clear: left;
+    clear: both;
   }
+  .col-12 {
+    width: calc(99.9% * 12/12 - (30px - 30px * 12/12));
+  }
+  .col-12:nth-child(1n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  .col-12:last-child {
+    margin-right: 0;
+  }
+  .col-12:nth-child(12n) {
+    margin-right: 0;
+    float: right;
+  }
+  .col-12:nth-child(12n + 1) {
+    clear: both;
+  }
+}
+.nav {
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  float: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.nav .nav-link {
+  color: #0074d9;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+.nav .nav-link:hover {
+  color: #005dae;
+}
+.nav .nav-link:visited {
+  opacity: 0.8;
+}
+.nav .nav-link:hover {
+  border-bottom-color: transparent;
+}
+.nav-inline {
+  margin: 0;
+  padding: 0;
+}
+.nav-inline:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.nav-inline li {
+  float: left;
+  margin-right: 20px;
+  list-style-type: none;
+}
+.nav-inline li:last-child {
+  margin-right: 0;
 }
 .bg-shade {
   background-color: #eae8ec;
@@ -2195,4 +2470,71 @@ label {
 }
 .text-danger {
   color: #e96b5b;
+}
+.m-x-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.m-a-0 {
+  margin: 0 !important;
+}
+.m-t-0 {
+  margin-top: 0 !important;
+}
+.m-r-0 {
+  margin-right: 0 !important;
+}
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+.m-l-0 {
+  margin-left: 0 !important;
+}
+.m-a-1 {
+  margin: 1rem 1rem !important;
+}
+.m-t-1 {
+  margin-top: 1rem !important;
+}
+.m-r-1 {
+  margin-right: 1rem !important;
+}
+.m-b-1 {
+  margin-bottom: 1rem !important;
+}
+.m-l-1 {
+  margin-left: 1rem !important;
+}
+.p-a-0 {
+  padding: 0 !important;
+}
+.p-t-0 {
+  padding-top: 0 !important;
+}
+.p-r-0 {
+  padding-right: 0 !important;
+}
+.p-b-0 {
+  padding-bottom: 0 !important;
+}
+.p-l-0 {
+  padding-left: 0 !important;
+}
+.p-a-1 {
+  padding: 1rem 1rem !important;
+}
+.p-t-1 {
+  padding-top: 1rem !important;
+}
+.p-r-1 {
+  padding-right: 1rem !important;
+}
+.p-b-1 {
+  padding-bottom: 1rem !important;
+}
+.p-l-1 {
+  padding-left: 1rem !important;
+}
+.pos-f {
+  position: fixed;
 }
