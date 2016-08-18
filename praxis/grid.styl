@@ -39,19 +39,24 @@ if $enable-flex
   for num in (1...13)
     .col-{num}
       lost-column: num/12 12 ($grid-gutter-width / 2)
+      min-height: 1px
 
     // Special classes
     .col-third {
       lost-column: 4/12
+      min-height: 1px
     }
     .col-two-thirds {
       lost-column: 8/12
+      min-height: 1px
     }
     .col-half {
       lost-column: 6/12
+      min-height: 1px
     }
     .col-quarter {
       lost-column: 3/12
+      min-height: 1px
     }
 
 // Larger grid columns have more gutter
