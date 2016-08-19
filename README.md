@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/alejandroiglesias/praxis/raw/master/docs/assets/img/praxis-logo.jpg" alt="Praxis">
+</p>
+
 Praxis
 ------
 
