@@ -1,0 +1,19 @@
+//
+// Card
+// --------------------------------------------------
+
+.card
+  padding: $card-spacer
+  background-color: $card-bg
+  border-radius: $border-radius
+  box-shadow: $card-box-shadow
+
+  .card-title
+    margin-top: 0
+
+  .card-link
+    // Workaround to an Axis overspecification going to be removed soon (https://github.com/jescalan/axis/pull/305).
+    link($blue, 'darken')
+
+    & + .card-link
+      margin-left: $card-spacer

@@ -926,6 +926,29 @@ label {
   color: #0063b8;
   text-decoration: underline;
 }
+.card {
+  padding: 1.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1px 0 rgba(224,229,232,0.8), 0 1px 2px 0 rgba(224,229,232,0.6);
+}
+.card .card-title {
+  margin-top: 0;
+}
+.card .card-link {
+  color: #0074d9;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+.card .card-link:hover {
+  color: #005dae;
+}
+.card .card-link:visited {
+  opacity: 0.8;
+}
+.card .card-link + .card-link {
+  margin-left: 1.25rem;
+}
 .container-fluid,
 .container {
   padding-left: 15px;
