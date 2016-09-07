@@ -1,0 +1,36 @@
+.media-list
+  reset-list()
+
+  &.media-list-hover .media-list-item:hover
+    background-color: $media-list-item-bg-hover
+
+  .media-list-item
+    display: flex
+    flex-flow: row wrap
+    padding: $media-list-item-padding-y $media-list-item-padding-x // consider removing padding x on small screens
+    border-bottom: $media-list-item-border
+
+    &:first-child
+      border-top: $media-list-item-border
+
+    // Workaround to reset Axis link styles
+    a:not(.btn)
+      link($blue, 'darken')
+      color: inherit
+
+      &:hover
+        border-bottom-color: transparent
+
+    .media-list-item-image
+      margin-right: $media-list-item-padding-x
+
+    .media-list-body
+      flex: 1
+
+      // Ugly hack for Axis margins.
+      h1, h2, h3, h4, h5, h6,
+      p
+        margin: 0
+
+    .media-list-actions
+      margin-left: 3rem // 3rem fixes issues on mobile for now
