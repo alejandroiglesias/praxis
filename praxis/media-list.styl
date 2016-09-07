@@ -1,0 +1,41 @@
+.media-list
+  reset-list()
+
+  &.media-list-hover .media-list-item:hover
+    background-color: $media-list-item-bg-hover
+
+  // TODO: implement flexbox so that large `.media-list-body` text doesn't break component.
+  .media-list-item
+    clearfix()
+    padding: $media-list-item-padding-y $media-list-item-padding-x
+    border-bottom: $media-list-item-border
+
+    &:first-child
+      border-top: $media-list-item-border
+
+    // Workaround to reset link styles
+    a:not(.btn)
+      link($blue, 'darken')
+      color: inherit
+
+      &:hover
+        border-bottom-color: transparent
+
+    .media-list-item-image
+      float: left
+      //padding: $media-list-item-padding-y $media-list-item-padding-x
+
+    .media-list-body
+      overflow: hidden
+      float: left
+      padding-left: $media-list-item-padding-x
+      padding-right: $media-list-item-padding-x
+
+      // Ugly hack for Axis margins.
+      h1, h2, h3, h4, h5, h6,
+      p
+        margin: 0
+
+    .media-list-actions
+      float: right
+      //padding: $media-list-item-padding-y $media-list-item-padding-x

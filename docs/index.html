@@ -12,6 +12,7 @@
 
         <!-- Documentation extras -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="assets/css/docs.css">
     </head>
     <body>
@@ -58,6 +59,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#card">Card</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#media-list">Media list</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#utilities">Utilities</a>
@@ -333,6 +337,79 @@
                                     <a href="#" class="card-link">Another link</a>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+
+                    <section id="media-list">
+                        <h1 class="text-monserrat">Media list</h1>
+                        <p>Media list is a flexible component for displaying rows of data. The following example shows its application on a list of settings.</p>
+
+                        <div class="docs-example">
+                            <ul class="media-list">
+                                <li class="media-list-item">
+                                    <div class="media-list-item-image">
+                                        <i class="fa fa-check-circle fa-2x text-success"></i>
+                                    </div>
+                                    <div class="media-list-body">
+                                        <h4>Proin semper ut dolor in tincidunt</h4>
+                                        <p>Pellentesque ac est sed massa venenatis euismod ut eu nisi.</p>
+                                    </div>
+                                    <div class="media-list-actions">
+                                        <a href="javascript:;" class="btn btn-secondary">Edit</a>
+                                    </div>
+                                </li>
+                                <li class="media-list-item">
+                                    <div class="media-list-item-image">
+                                        <i class="fa fa-check-circle fa-2x text-success"></i>
+                                    </div>
+                                    <div class="media-list-body">
+                                        <h4>Mauris molestie blandit nulla</h4>
+                                        <p>Suspendisse ornare ipsum et augue tincidunt, eu volutpat nibh efficitur.</p>
+                                    </div>
+                                    <div class="media-list-actions">
+                                        <a href="javascript:;" class="btn btn-secondary">Edit</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p>And this is an example for an issue tracker.</p>
+
+                        <div class="docs-example">
+                            <ul class="media-list media-list-hover">
+                                <li class="media-list-item">
+                                    <div class="media-list-item-image">
+                                        <i class="fa fa-exclamation-circle text-danger"></i>
+                                    </div>
+                                    <div class="media-list-body">
+                                        <h5>
+                                            <a href="javascript:;">Proin semper ut dolor in tincidunt</a>
+                                        </h5>
+                                        <p class="small text-muted">#1235 opened 1 hour ago by <a href="javascript:;">euismod</a></p>
+                                    </div>
+                                    <div class="media-list-actions">
+                                        <a href="javascript:;">
+                                            <i class="fa fa-comment-o"></i> <strong class="small">1</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="media-list-item">
+                                    <div class="media-list-item-image">
+                                        <i class="fa fa-check-circle text-success"></i>
+                                    </div>
+                                    <div class="media-list-body">
+                                        <h5>
+                                            <a href="javascript:;">Mauris molestie blandit nulla</a>
+                                        </h5>
+                                        <p class="small text-muted">#1234 by <a href="javascript:;">varius</a> was closed 8 hours ago</p>
+                                    </div>
+                                    <div class="media-list-actions">
+                                        <a href="javascript:;">
+                                            <i class="fa fa-comment-o"></i> <strong class="small">3</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </section>
 
