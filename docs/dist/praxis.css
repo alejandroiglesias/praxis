@@ -2407,20 +2407,11 @@ label {
 .media-list .media-list-item:first-child {
   border-top: 1px solid #eae8ec;
 }
-.media-list .media-list-item a:not(.btn) {
-  color: #0074d9;
-  text-decoration: none;
-  transition: all .3s ease;
-  color: inherit;
-}
-.media-list .media-list-item a:not(.btn):hover {
-  color: #005dae;
-}
-.media-list .media-list-item a:not(.btn):visited {
-  opacity: 0.8;
-}
-.media-list .media-list-item a:not(.btn):hover {
-  border-bottom-color: transparent;
+.media-list .media-list-item.active,
+.media-list .media-list-item.active:hover {
+  background-color: #179be7;
+  color: #fff;
+  border-color: #179be7;
 }
 .media-list .media-list-item .media-list-item-image {
   margin-right: 1.25rem;
@@ -2439,6 +2430,25 @@ label {
 }
 .media-list .media-list-item .media-list-actions {
   margin-left: 3rem;
+}
+.media-list a.media-list-item,
+.media-list .media-list-item a:not(.btn) {
+  color: #0074d9;
+  text-decoration: none;
+  transition: all .3s ease;
+  color: inherit;
+}
+.media-list a.media-list-item:hover,
+.media-list .media-list-item a:not(.btn):hover {
+  color: #005dae;
+}
+.media-list a.media-list-item:visited,
+.media-list .media-list-item a:not(.btn):visited {
+  opacity: 0.8;
+}
+.media-list a.media-list-item:hover,
+.media-list .media-list-item a:not(.btn):hover {
+  border-bottom-color: transparent;
 }
 .nav {
   margin: 0;

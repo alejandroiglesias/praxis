@@ -13,13 +13,11 @@
     &:first-child
       border-top: $media-list-item-border
 
-    // Workaround to reset Axis link styles
-    a:not(.btn)
-      link($blue, 'darken')
-      color: inherit
-
-      &:hover
-        border-bottom-color: transparent
+    &.active,
+    &.active:hover
+      background-color: $brand-primary
+      color: $white
+      border-color: $brand-primary
 
     .media-list-item-image
       margin-right: $media-list-item-padding-x
@@ -34,3 +32,12 @@
 
     .media-list-actions
       margin-left: 3rem // 3rem fixes issues on mobile for now
+
+  // Workaround to reset Axis link styles
+  a.media-list-item,
+  .media-list-item a:not(.btn)
+    link($blue, 'darken')
+    color: inherit
+
+    &:hover
+      border-bottom-color: transparent
