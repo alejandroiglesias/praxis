@@ -4,16 +4,16 @@
   &.media-list-hover .media-list-item:hover
     background-color: $media-list-item-bg-hover
 
-  // TODO: implement flexbox so that large `.media-list-body` text doesn't break component.
   .media-list-item
-    clearfix()
-    padding: $media-list-item-padding-y $media-list-item-padding-x
+    display: flex
+    flex-flow: row wrap
+    padding: $media-list-item-padding-y $media-list-item-padding-x // consider removing padding x on small screens
     border-bottom: $media-list-item-border
 
     &:first-child
       border-top: $media-list-item-border
 
-    // Workaround to reset link styles
+    // Workaround to reset Axis link styles
     a:not(.btn)
       link($blue, 'darken')
       color: inherit
@@ -22,14 +22,10 @@
         border-bottom-color: transparent
 
     .media-list-item-image
-      float: left
-      //padding: $media-list-item-padding-y $media-list-item-padding-x
+      margin-right: $media-list-item-padding-x
 
     .media-list-body
-      overflow: hidden
-      float: left
-      padding-left: $media-list-item-padding-x
-      padding-right: $media-list-item-padding-x
+      flex: 1
 
       // Ugly hack for Axis margins.
       h1, h2, h3, h4, h5, h6,
@@ -37,5 +33,4 @@
         margin: 0
 
     .media-list-actions
-      float: right
-      //padding: $media-list-item-padding-y $media-list-item-padding-x
+      margin-left: 3rem // 3rem fixes issues on mobile for now

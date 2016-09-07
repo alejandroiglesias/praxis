@@ -2399,13 +2399,10 @@ label {
   background-color: #eae8ec;
 }
 .media-list .media-list-item {
+  display: flex;
+  flex-flow: row wrap;
   padding: 1rem 1.25rem;
   border-bottom: 1px solid #eae8ec;
-}
-.media-list .media-list-item:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 .media-list .media-list-item:first-child {
   border-top: 1px solid #eae8ec;
@@ -2426,13 +2423,10 @@ label {
   border-bottom-color: transparent;
 }
 .media-list .media-list-item .media-list-item-image {
-  float: left;
+  margin-right: 1.25rem;
 }
 .media-list .media-list-item .media-list-body {
-  overflow: hidden;
-  float: left;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  flex: 1;
 }
 .media-list .media-list-item .media-list-body h1,
 .media-list .media-list-item .media-list-body h2,
@@ -2444,7 +2438,7 @@ label {
   margin: 0;
 }
 .media-list .media-list-item .media-list-actions {
-  float: right;
+  margin-left: 3rem;
 }
 .nav {
   margin: 0;
